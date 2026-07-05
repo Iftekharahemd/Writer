@@ -1,0 +1,64 @@
+/* ============================================
+   CHARACTERS PAGE — INK & IMAGINATION
+   ============================================ */
+
+.characters-hero {
+  padding-top: calc(var(--nav-height) + var(--space-3xl));
+  padding-bottom: var(--space-2xl);
+  background:
+    radial-gradient(ellipse at 60% 40%, rgba(168,85,247,0.2) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 70%, rgba(236,72,153,0.1) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.characters-toolbar {
+  background: var(--bg-secondary);
+  padding-block: var(--space-lg);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: var(--nav-height);
+  z-index: var(--z-raised);
+}
+
+.characters-section { background: var(--bg-primary); }
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* Enhanced character card */
+.character-card {
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-slow);
+}
+
+.character-card:hover {
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-glow-sm);
+}
+
+.character-quote {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: var(--space-xs);
+}
+
+/* Hidden state for filter */
+.character-card[hidden] { display: none; }
+
+@media (max-width: 1024px) {
+  .characters-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .characters-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+}
+
+@media (max-width: 400px) {
+  .characters-grid { grid-template-columns: 1fr; }
+}

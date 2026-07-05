@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ink & Imagination — Official website of a romance, mystery, and drama author. Explore books, characters, and the story world." />
+  <meta name="theme-color" content="#0a0a14" />
+  <title>Ink & Imagination — Writer. Dreamer. Storyteller.</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/home.css" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Noise Texture -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Reading Progress -->
+  <div class="reading-progress" id="readingProgress" role="progressbar" aria-label="Reading progress" aria-valuenow="0"></div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition-overlay" id="pageOverlay" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <header role="banner">
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="Ink & Imagination - Home">
+          Ink &amp; Imagination
+          <span>Writer · Dreamer · Storyteller</span>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"       class="nav-link active">Home</a></li>
+          <li><a href="about.html"       class="nav-link">About</a></li>
+          <li><a href="books.html"       class="nav-link">Books</a></li>
+          <li><a href="characters.html"  class="nav-link">Characters</a></li>
+          <li><a href="universe.html"    class="nav-link">Universe</a></li>
+          <li><a href="blog.html"        class="nav-link">Blog</a></li>
+          <li><a href="contact.html"     class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark mode">🌙</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="index.html"       class="nav-link">Home</a></li>
+        <li><a href="about.html"       class="nav-link">About</a></li>
+        <li><a href="books.html"       class="nav-link">Books</a></li>
+        <li><a href="characters.html"  class="nav-link">Characters</a></li>
+        <li><a href="universe.html"    class="nav-link">Universe</a></li>
+        <li><a href="blog.html"        class="nav-link">Blog</a></li>
+        <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-label="Hero">
+      <!-- Particles -->
+      <div class="particles" id="heroParticles" aria-hidden="true"></div>
+
+      <!-- Orbs -->
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <!-- Left: Text -->
+        <div class="hero-content">
+          <p class="section-label hero-label reveal">Currently Writing</p>
+
+          <h1 class="hero-heading reveal delay-1">
+            Stories that<br />
+            <em class="text-gradient">stay with you</em><br />
+            long after the<br />final page.
+          </h1>
+
+          <p class="hero-sub reveal delay-2">
+            Romance. Mystery. GL. Drama.<br />
+            Words that feel, stories that heal.
+          </p>
+
+          <div class="hero-cta reveal delay-3">
+            <a href="books.html" class="btn btn-primary">
+              <span>✦</span> Explore Books
+            </a>
+            <a href="about.html" class="btn btn-secondary">About the Author</a>
+          </div>
+
+          <!-- Signature -->
+          <div class="hero-signature reveal delay-4">
+            <p class="signature-text font-display font-italic">Writer. Dreamer. Storyteller.</p>
+          </div>
+        </div>
+
+        <!-- Right: Floating Books -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-books">
+            <div class="hero-book hero-book-1">
+              <img src="assets/images/book-bound-by-secrets.png" alt="" loading="eager" width="180" height="270" />
+              <div class="book-glow"></div>
+            </div>
+            <div class="hero-book hero-book-2">
+              <img src="assets/images/book-under-your-silence.png" alt="" loading="lazy" width="160" height="240" />
+              <div class="book-glow"></div>
+            </div>
+            <div class="hero-book hero-book-3">
+              <img src="assets/images/book-shadows-of-truth.png" alt="" loading="lazy" width="140" height="210" />
+              <div class="book-glow"></div>
+            </div>
+          </div>
+
+          <!-- Floating Quote -->
+          <div class="hero-quote-float">
+            <p class="font-display font-italic">"A good story isn't written, it's felt."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+
+    <!-- ── FEATURED BOOKS ── -->
+    <section class="featured-books" aria-labelledby="featured-heading">
+      <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header flex-between">
+          <div>
+            <p class="section-label reveal">On the Shelf</p>
+            <h2 class="section-title reveal delay-1" id="featured-heading">Featured Books</h2>
+          </div>
+          <a href="books.html" class="view-all reveal delay-2">View All</a>
+        </div>
+
+        <div class="books-grid" role="list">
+
+          <!-- Book 1 -->
+          <article class="book-card reveal delay-1" role="listitem">
+            <a href="book-detail.html?id=1" class="book-cover-wrap" aria-label="Bound by Secrets - Romance novel">
+              <img src="assets/images/book-bound-by-secrets.png" alt="Book cover: Bound by Secrets" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=1" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="1" aria-label="Add to favorites">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">Romance</p>
+              <h3 class="book-card-title">Bound by Secrets</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.5 stars">★★★★½</div>
+                <span class="rating-value">4.5</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 2 -->
+          <article class="book-card reveal delay-2" role="listitem">
+            <a href="book-detail.html?id=2" class="book-cover-wrap" aria-label="Under Your Silence - GL Romance">
+              <img src="assets/images/book-under-your-silence.png" alt="Book cover: Under Your Silence" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=2" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="2" aria-label="Add to favorites">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">GL Romance</p>
+              <h3 class="book-card-title">Under Your Silence</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.8 stars">★★★★★</div>
+                <span class="rating-value">4.8</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 3 -->
+          <article class="book-card reveal delay-3" role="listitem">
+            <a href="book-detail.html?id=3" class="book-cover-wrap" aria-label="Shadows of Truth - Mystery">
+              <img src="assets/images/book-shadows-of-truth.png" alt="Book cover: Shadows of Truth" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=3" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="3" aria-label="Add to favorites">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">Mystery</p>
+              <h3 class="book-card-title">Shadows of Truth</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.7 stars">★★★★½</div>
+                <span class="rating-value">4.7</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 4 -->
+          <article class="book-card reveal delay-4" role="listitem">
+            <a href="book-detail.html?id=4" class="book-cover-wrap" aria-label="Beyond the Lines - Drama">
+              <img src="assets/images/book-beyond-the-lines.png" alt="Book cover: Beyond the Lines" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=4" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="4" aria-label="Add to favorites">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">Drama</p>
+              <h3 class="book-card-title">Beyond the Lines</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.6 stars">★★★★½</div>
+                <span class="rating-value">4.6</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT SNIPPET ── -->
+    <section class="about-snippet" aria-labelledby="about-heading">
+      <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+      <div class="container about-inner">
+
+        <!-- Image -->
+        <div class="about-visual reveal-left">
+          <div class="about-img-wrap">
+            <img src="assets/images/author.png" alt="Author portrait — sitting at a desk surrounded by books" loading="lazy" width="480" height="560" />
+            <div class="about-img-frame" aria-hidden="true"></div>
+            <div class="about-img-badge">
+              <span class="font-display font-italic">"Thank you for being<br />part of my story."</span>
+              <em>— Author Name</em>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+          <p class="section-label reveal">About the Author</p>
+          <h2 class="section-title reveal delay-1" id="about-heading">Every story has a beginning.</h2>
+
+          <div class="about-body reveal delay-2">
+            <p>I'm a writer who believes in the power of emotions, the beauty of relationships, and the strength of words.</p>
+            <p>I write stories that stay with you, because they come from a place that once lived in silence too.</p>
+          </div>
+
+          <div class="about-cta reveal delay-3">
+            <a href="about.html" class="btn btn-primary">My Journey</a>
+            <a href="about.html#process" class="btn btn-secondary">Writing Process</a>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="about-stats reveal delay-4">
+            <div class="stat-item">
+              <span class="stat-icon">📚</span>
+              <strong class="stat-number"><span class="counter" data-target="12">0</span><span class="plus">+</span></strong>
+              <span class="stat-label">Books Published</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">👥</span>
+              <strong class="stat-number"><span class="counter" data-target="50">0</span><span class="plus">K+</span></strong>
+              <span class="stat-label">Happy Readers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">🌍</span>
+              <strong class="stat-number"><span class="counter" data-target="5">0</span></strong>
+              <span class="stat-label">Languages</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon">🏆</span>
+              <strong class="stat-number"><span class="counter" data-target="9">0</span></strong>
+              <span class="stat-label">Awards Won</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── LATEST RELEASE / QUOTE ── -->
+    <section class="latest-quote" aria-labelledby="quote-heading">
+      <div class="container">
+        <div class="latest-quote-grid">
+
+          <!-- Latest Release -->
+          <div class="latest-release glass-card reveal-left">
+            <p class="section-label">Latest Release</p>
+            <h2 class="section-title" id="quote-heading" style="font-size:var(--text-3xl);">When Hearts Collide</h2>
+            <span class="genre-badge">Romance</span>
+            <p style="margin-top:var(--space-md);font-size:var(--text-sm);color:var(--text-muted);">
+              What happens when souls collide, will they feel each other…or break apart forever?
+            </p>
+            <div class="latest-release-img">
+              <img src="assets/images/book-bound-by-secrets.png" alt="When Hearts Collide book cover" loading="lazy" width="160" height="240" />
+            </div>
+            <div class="flex gap-sm" style="margin-top:var(--space-lg);">
+              <a href="book-detail.html?id=1" class="btn btn-primary btn-sm">Read Sample</a>
+              <a href="#" class="btn btn-secondary btn-sm">Buy Now</a>
+            </div>
+          </div>
+
+          <!-- Featured Quote -->
+          <div class="quote-card reveal" style="display:flex;flex-direction:column;justify-content:center;">
+            <blockquote>
+              "A good story isn't written, it's felt. And a true reader is never the same again."
+            </blockquote>
+            <p style="margin-top:var(--space-lg);font-family:var(--font-ui);font-size:var(--text-sm);color:var(--text-muted);">— Author Name, <em>Beyond the Lines</em></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── REVIEWS ── -->
+    <section class="reviews" aria-labelledby="reviews-heading">
+      <div class="bg-orb bg-orb-3" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header centered">
+          <p class="section-label reveal">What Readers Say</p>
+          <h2 class="section-title reveal delay-1" id="reviews-heading">Reviews</h2>
+        </div>
+
+        <div class="reviews-grid">
+
+          <div class="review-card glass-card reveal delay-1">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Her world had me on every single page. I love everything."</p>
+            <div class="review-author">
+              <div class="review-avatar">A</div>
+              <div>
+                <strong class="review-name">Ananya P.</strong>
+                <p class="review-source">Goodreads</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass-card reveal delay-2">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The emotions are deep, delicate and real. Absolutely stunning storytelling."</p>
+            <div class="review-author">
+              <div class="review-avatar">R</div>
+              <div>
+                <strong class="review-name">Riya M.</strong>
+                <p class="review-source">Amazon</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass-card reveal delay-3">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The best GL! The real read. I felt everything. A masterpiece."</p>
+            <div class="review-author">
+              <div class="review-avatar">M</div>
+              <div>
+                <strong class="review-name">Megha K.</strong>
+                <p class="review-source">BookTok</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BLOG PREVIEW ── -->
+    <section class="blog-preview" aria-labelledby="blog-preview-heading">
+      <div class="container">
+        <div class="section-header flex-between">
+          <div>
+            <p class="section-label reveal">From the Desk</p>
+            <h2 class="section-title reveal delay-1" id="blog-preview-heading">Blog</h2>
+            <p class="section-subtitle reveal delay-2">Thoughts. Behind the scenes. Musings.</p>
+          </div>
+          <a href="blog.html" class="view-all reveal delay-2">Read All</a>
+        </div>
+
+        <div class="blog-preview-grid">
+
+          <article class="blog-card reveal delay-1">
+            <div class="blog-card-img">
+              <img src="assets/images/author.png" alt="Blog post thumbnail" loading="lazy" width="400" height="225" />
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Writing</span>
+                <span class="blog-meta-item">📖 5 min read</span>
+              </div>
+              <h3 class="blog-card-title">How I Write to Feel Emotions</h3>
+              <p class="blog-card-excerpt">The process of writing from raw emotion — how vulnerability becomes the engine of every story.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-item">June 28, 2026</span>
+                <a href="blog-detail.html?id=1" class="view-all" style="font-size:var(--text-xs);">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal delay-2">
+            <div class="blog-card-img">
+              <img src="assets/images/book-under-your-silence.png" alt="Blog post thumbnail" loading="lazy" width="400" height="225" />
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Behind the Story</span>
+                <span class="blog-meta-item">📖 7 min read</span>
+              </div>
+              <h3 class="blog-card-title">Behind the Story: When Hearts Collide</h3>
+              <p class="blog-card-excerpt">The inspiration, the heartbreak, and the magic that went into writing my latest novel.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-item">June 15, 2026</span>
+                <a href="blog-detail.html?id=2" class="view-all" style="font-size:var(--text-xs);">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal delay-3">
+            <div class="blog-card-img">
+              <img src="assets/images/book-beyond-the-lines.png" alt="Blog post thumbnail" loading="lazy" width="400" height="225" />
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Tips</span>
+                <span class="blog-meta-item">📖 4 min read</span>
+              </div>
+              <h3 class="blog-card-title">5 Things Every Writer Learns Late</h3>
+              <p class="blog-card-excerpt">Hard-earned lessons from my writing journey that I wish someone had told me sooner.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-item">June 5, 2026</span>
+                <a href="blog-detail.html?id=3" class="view-all" style="font-size:var(--text-xs);">Read More</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── NEWSLETTER ── -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-inner glass-card" style="text-align:center;max-width:640px;margin:auto;">
+          <span class="newsletter-icon" aria-hidden="true">✉️</span>
+          <p class="section-label" style="justify-content:center;margin-top:var(--space-md);">Newsletter</p>
+          <h2 class="section-title reveal" id="newsletter-heading" style="font-size:var(--text-3xl);">Let's stay connected.</h2>
+          <p class="section-subtitle reveal delay-1" style="margin:var(--space-md) auto var(--space-xl);font-size:var(--text-sm);">
+            Get updates on new books, stories, exclusives and more.
+          </p>
+          <form class="newsletter-form reveal delay-2" id="newsletterForm" novalidate style="margin:auto;">
+            <label for="newsletterEmail" class="sr-only">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" autocomplete="email" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="bg-orb bg-orb-1" style="opacity:0.5;" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:var(--text-2xl);">
+            Ink &amp; Imagination
+            <span>Writer · Dreamer · Storyteller</span>
+          </a>
+          <p>Every story has a beginning. This is mine. Thank you for being part of it.</p>
+          <div class="social-links" style="margin-top:var(--space-lg);">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Goodreads">📚</a>
+            <a href="#" class="social-link" aria-label="Pinterest">📌</a>
+          </div>
+        </div>
+
+        <!-- Pages -->
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html"      class="footer-link">Home</a></li>
+            <li><a href="about.html"      class="footer-link">About Me</a></li>
+            <li><a href="books.html"      class="footer-link">All Books</a></li>
+            <li><a href="characters.html" class="footer-link">Characters</a></li>
+            <li><a href="universe.html"   class="footer-link">Universe</a></li>
+          </ul>
+        </div>
+
+        <!-- More -->
+        <div>
+          <p class="footer-heading">More</p>
+          <ul class="footer-links" role="list">
+            <li><a href="blog.html"         class="footer-link">Blog</a></li>
+            <li><a href="contact.html"      class="footer-link">Contact</a></li>
+            <li><a href="#"                 class="footer-link">Newsletter</a></li>
+            <li><a href="books.html#latest" class="footer-link">Latest Release</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links" role="list">
+            <li><a href="mailto:hello@inkimagination.com" class="footer-link">hello@inkimagination.com</a></li>
+            <li><a href="contact.html" class="footer-link">Send a Message</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ink &amp; Imagination. All rights reserved.</p>
+        <p>Made with ♥ and many late nights.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="bottom-nav" aria-label="Mobile bottom navigation">
+    <div class="bottom-nav-inner">
+      <a href="books.html"       class="bottom-nav-item" aria-label="Books">
+        <span class="icon">📚</span><span>Books</span>
+      </a>
+      <a href="characters.html"  class="bottom-nav-item" aria-label="Characters">
+        <span class="icon">✨</span><span>Characters</span>
+      </a>
+      <a href="index.html"       class="bottom-nav-item active" aria-label="Home" aria-current="page">
+        <span class="icon">🏠</span><span>Home</span>
+      </a>
+      <a href="universe.html"    class="bottom-nav-item" aria-label="Universe">
+        <span class="icon">🌌</span><span>Universe</span>
+      </a>
+      <a href="blog.html"        class="bottom-nav-item" aria-label="Blog">
+        <span class="icon">📝</span><span>Blog</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/theme.js"            defer></script>
+  <script src="assets/js/nav.js"              defer></script>
+  <script src="assets/js/cursor.js"           defer></script>
+  <script src="assets/js/animations.js"       defer></script>
+  <script src="assets/js/reading-progress.js" defer></script>
+  <script src="assets/js/stats-counter.js"    defer></script>
+  <script src="assets/js/particles.js"        defer></script>
+  <script src="assets/js/main.js"             defer></script>
+</body>
+</html>

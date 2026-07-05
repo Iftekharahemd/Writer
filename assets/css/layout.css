@@ -1,0 +1,177 @@
+/* ============================================
+   LAYOUT — INK & IMAGINATION
+   ============================================ */
+
+/* ── Container ── */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  width: 100%;
+}
+
+.container-sm { max-width: 768px; margin-inline: auto; padding-inline: var(--container-pad); }
+.container-lg { max-width: 1440px; margin-inline: auto; padding-inline: var(--container-pad); }
+
+/* ── Section ── */
+section {
+  padding-block: var(--space-3xl);
+  position: relative;
+  overflow: hidden;
+}
+
+section.section-sm  { padding-block: var(--space-2xl); }
+section.section-lg  { padding-block: var(--space-4xl); }
+
+/* ── Grid Systems ── */
+.grid          { display: grid; }
+.grid-2        { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+.grid-3        { grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+.grid-4        { grid-template-columns: repeat(4, 1fr); gap: var(--space-lg); }
+.grid-auto     { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-lg); }
+.grid-books    { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-xl); }
+
+/* ── Flex Utilities ── */
+.flex          { display: flex; }
+.flex-col      { flex-direction: column; }
+.flex-center   { align-items: center; justify-content: center; }
+.flex-between  { align-items: center; justify-content: space-between; }
+.flex-wrap     { flex-wrap: wrap; }
+.gap-xs        { gap: var(--space-xs); }
+.gap-sm        { gap: var(--space-sm); }
+.gap-md        { gap: var(--space-md); }
+.gap-lg        { gap: var(--space-lg); }
+.gap-xl        { gap: var(--space-xl); }
+
+/* ── Section Header ── */
+.section-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.section-header.centered {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-header.centered .section-label {
+  justify-content: center;
+}
+
+.section-header.centered .section-label::before {
+  display: none;
+}
+
+.section-header.centered .section-subtitle {
+  margin-inline: auto;
+}
+
+/* ── View All Link ── */
+.view-all {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.view-all::after {
+  content: '→';
+  transition: transform var(--transition-base);
+}
+
+.view-all:hover {
+  color: var(--color-primary-light);
+  gap: var(--space-sm);
+}
+
+.view-all:hover::after {
+  transform: translateX(4px);
+}
+
+/* ── Divider ── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-subtle);
+  margin-block: var(--space-xl);
+}
+
+.divider-glow {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  margin-block: var(--space-2xl);
+}
+
+/* ── Sticky sidebar ── */
+.sticky-top {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-lg));
+}
+
+/* ── Background Decorations ── */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%);
+  top: -200px;
+  left: -200px;
+}
+
+.bg-orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(236,72,153,0.12) 0%, transparent 70%);
+  bottom: -200px;
+  right: -100px;
+}
+
+.bg-orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ── Noise Texture Overlay ── */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  section { padding-block: var(--space-2xl); }
+  section.section-lg { padding-block: var(--space-2xl); }
+
+  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .grid-books { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .grid-books { grid-template-columns: repeat(2, 1fr); }
+}

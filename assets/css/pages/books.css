@@ -1,0 +1,83 @@
+/* ============================================
+   BOOKS PAGE — INK & IMAGINATION
+   ============================================ */
+
+/* ── Page Hero ── */
+.page-hero {
+  padding-top: calc(var(--nav-height) + var(--space-3xl));
+  padding-bottom: var(--space-2xl);
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(124,58,237,0.2) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(168,85,247,0.12) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero h1 {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.page-hero-sub {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ── Toolbar ── */
+.books-toolbar {
+  background: var(--bg-secondary);
+  padding-block: var(--space-lg);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: var(--nav-height);
+  z-index: var(--z-raised);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.books-toolbar-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+/* ── Books Grid ── */
+.all-books-section { background: var(--bg-primary); }
+
+.all-books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+/* No results */
+.no-results {
+  text-align: center;
+  padding: var(--space-4xl);
+  grid-column: 1 / -1;
+}
+
+.no-results span { font-size: 3rem; display: block; margin-bottom: var(--space-md); }
+.no-results p { color: var(--text-muted); font-family: var(--font-ui); }
+
+/* Hidden filter state */
+.book-card[hidden] { display: none; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .all-books-grid { grid-template-columns: repeat(3, 1fr); }
+  .books-toolbar-inner { gap: var(--space-md); }
+}
+
+@media (max-width: 768px) {
+  .all-books-grid { grid-template-columns: repeat(2, 1fr); }
+  .books-toolbar-inner { flex-direction: column; align-items: flex-start; }
+  .search-bar { max-width: 100%; width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .all-books-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+}

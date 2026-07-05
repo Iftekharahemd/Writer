@@ -1,0 +1,133 @@
+/* ============================================
+   CSS CUSTOM PROPERTIES — INK & IMAGINATION
+   ============================================ */
+
+:root {
+  /* ── Dark Theme (Default) ── */
+  --bg-primary:        #0a0a14;
+  --bg-secondary:      #0f0f1e;
+  --bg-card:           #13132b;
+  --bg-card-hover:     #1a1a38;
+  --bg-glass:          rgba(255,255,255,0.03);
+  --bg-glass-hover:    rgba(255,255,255,0.06);
+  --bg-overlay:        rgba(10,10,20,0.85);
+
+  --color-primary:     #a855f7;
+  --color-primary-light: #c084fc;
+  --color-primary-dark:  #7c3aed;
+  --color-secondary:   #ec4899;
+  --color-accent:      #f59e0b;
+  --color-success:     #10b981;
+  --color-star:        #f59e0b;
+
+  --text-primary:      #f1f0ff;
+  --text-secondary:    #b8b5d4;
+  --text-muted:        #6e6b8a;
+  --text-on-primary:   #ffffff;
+
+  --border-color:      rgba(168,85,247,0.15);
+  --border-color-hover: rgba(168,85,247,0.4);
+  --border-subtle:     rgba(255,255,255,0.06);
+
+  --shadow-sm:         0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md:         0 8px 32px rgba(0,0,0,0.5);
+  --shadow-lg:         0 16px 64px rgba(0,0,0,0.6);
+  --shadow-glow:       0 0 30px rgba(168,85,247,0.25);
+  --shadow-glow-sm:    0 0 15px rgba(168,85,247,0.2);
+  --shadow-card:       0 4px 24px rgba(0,0,0,0.4), 0 0 0 1px rgba(168,85,247,0.08);
+
+  --gradient-primary:  linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+  --gradient-hero:     radial-gradient(ellipse at 30% 40%, rgba(124,58,237,0.35) 0%, transparent 60%),
+                       radial-gradient(ellipse at 80% 20%, rgba(168,85,247,0.2) 0%, transparent 50%),
+                       radial-gradient(ellipse at 60% 80%, rgba(236,72,153,0.15) 0%, transparent 50%);
+  --gradient-card:     linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+  --gradient-text:     linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #ec4899 100%);
+  --gradient-overlay:  linear-gradient(to top, rgba(10,10,20,0.95) 0%, rgba(10,10,20,0.5) 60%, transparent 100%);
+
+  /* ── Spacing ── */
+  --space-xs:    4px;
+  --space-sm:    8px;
+  --space-md:    16px;
+  --space-lg:    24px;
+  --space-xl:    40px;
+  --space-2xl:   64px;
+  --space-3xl:   96px;
+  --space-4xl:   128px;
+
+  /* ── Typography ── */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Lora', Georgia, serif;
+  --font-ui:      'Inter', system-ui, sans-serif;
+
+  --text-xs:     0.75rem;
+  --text-sm:     0.875rem;
+  --text-base:   1rem;
+  --text-lg:     1.125rem;
+  --text-xl:     1.25rem;
+  --text-2xl:    1.5rem;
+  --text-3xl:    1.875rem;
+  --text-4xl:    2.25rem;
+  --text-5xl:    3rem;
+  --text-6xl:    3.75rem;
+  --text-7xl:    4.5rem;
+
+  /* ── Border Radius ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-2xl:  32px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ── */
+  --transition-fast:   0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --nav-height:    72px;
+  --container-max: 1280px;
+  --container-pad: clamp(16px, 5vw, 80px);
+
+  /* ── Z-index scale ── */
+  --z-base:    1;
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-nav:     200;
+  --z-modal:   300;
+  --z-toast:   400;
+  --z-cursor:  9999;
+}
+
+/* ── Light Theme ── */
+[data-theme="light"] {
+  --bg-primary:        #faf8ff;
+  --bg-secondary:      #f3f0ff;
+  --bg-card:           #ffffff;
+  --bg-card-hover:     #f9f5ff;
+  --bg-glass:          rgba(124,58,237,0.04);
+  --bg-glass-hover:    rgba(124,58,237,0.08);
+  --bg-overlay:        rgba(250,248,255,0.9);
+
+  --color-primary:     #7c3aed;
+  --color-primary-light: #9333ea;
+  --color-primary-dark:  #6d28d9;
+
+  --text-primary:      #1e1b4b;
+  --text-secondary:    #4c1d95;
+  --text-muted:        #7c3aed;
+
+  --border-color:      rgba(124,58,237,0.2);
+  --border-color-hover: rgba(124,58,237,0.5);
+  --border-subtle:     rgba(124,58,237,0.1);
+
+  --shadow-sm:         0 2px 8px rgba(124,58,237,0.1);
+  --shadow-md:         0 8px 32px rgba(124,58,237,0.15);
+  --shadow-lg:         0 16px 64px rgba(124,58,237,0.2);
+  --shadow-glow:       0 0 30px rgba(124,58,237,0.15);
+  --shadow-card:       0 4px 24px rgba(124,58,237,0.12), 0 0 0 1px rgba(124,58,237,0.1);
+
+  --gradient-hero:     radial-gradient(ellipse at 30% 40%, rgba(124,58,237,0.12) 0%, transparent 60%),
+                       radial-gradient(ellipse at 80% 20%, rgba(168,85,247,0.08) 0%, transparent 50%);
+}

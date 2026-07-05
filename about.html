@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About the Author — Ink & Imagination. Meet the writer behind the stories: her journey, writing process, and the world she creates." />
+  <meta name="theme-color" content="#0a0a14" />
+  <title>About the Author — Ink & Imagination</title>
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/about.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="reading-progress" id="readingProgress" role="progressbar" aria-label="Reading progress" aria-valuenow="0"></div>
+  <div class="page-transition-overlay" id="pageOverlay" aria-hidden="true"></div>
+
+  <header role="banner">
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"       class="nav-link">Home</a></li>
+          <li><a href="about.html"       class="nav-link active">About</a></li>
+          <li><a href="books.html"       class="nav-link">Books</a></li>
+          <li><a href="characters.html"  class="nav-link">Characters</a></li>
+          <li><a href="universe.html"    class="nav-link">Universe</a></li>
+          <li><a href="blog.html"        class="nav-link">Blog</a></li>
+          <li><a href="contact.html"     class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="index.html"       class="nav-link">Home</a></li>
+        <li><a href="about.html"       class="nav-link">About</a></li>
+        <li><a href="books.html"       class="nav-link">Books</a></li>
+        <li><a href="characters.html"  class="nav-link">Characters</a></li>
+        <li><a href="universe.html"    class="nav-link">Universe</a></li>
+        <li><a href="blog.html"        class="nav-link">Blog</a></li>
+        <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── ABOUT HERO ── -->
+    <section class="about-hero" aria-labelledby="about-hero-heading">
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      <div class="container about-hero-inner">
+        <div class="about-hero-text">
+          <p class="section-label reveal">About the Author</p>
+          <h1 class="reveal delay-1" id="about-hero-heading">
+            Every story has<br /><em class="text-gradient">a beginning.</em>
+          </h1>
+          <p class="about-hero-sub reveal delay-2">
+            I'm a writer who believes in the power of emotions, the beauty of relationships, and the strength of words. I write stories that stay with you, because they come from a place that once lived in silence too.
+          </p>
+          <div class="about-hero-cta reveal delay-3">
+            <a href="#journey" class="btn btn-primary">My Journey</a>
+            <a href="#process" class="btn btn-secondary">Writing Process</a>
+          </div>
+        </div>
+        <div class="about-hero-img reveal-right">
+          <div class="about-img-wrap">
+            <img src="assets/images/author.png" alt="Author portrait" loading="eager" width="500" height="600" />
+            <div class="about-img-frame" aria-hidden="true"></div>
+            <div class="about-img-badge">
+              <span class="font-display font-italic">"Thank you for being<br />part of my story."</span>
+              <em>— Author Name</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STATS ── -->
+    <section class="about-stats-section" aria-labelledby="stats-heading">
+      <div class="container">
+        <h2 class="sr-only" id="stats-heading">Author statistics</h2>
+        <div class="about-stats-grid">
+          <div class="stat-item reveal delay-1">
+            <span class="stat-icon">📚</span>
+            <strong class="stat-number"><span class="counter" data-target="12">0</span><span class="plus">+</span></strong>
+            <span class="stat-label">Books Published</span>
+          </div>
+          <div class="stat-item reveal delay-2">
+            <span class="stat-icon">👥</span>
+            <strong class="stat-number"><span class="counter" data-target="50">0</span><span class="plus">K+</span></strong>
+            <span class="stat-label">Happy Readers</span>
+          </div>
+          <div class="stat-item reveal delay-3">
+            <span class="stat-icon">🌍</span>
+            <strong class="stat-number"><span class="counter" data-target="5">0</span></strong>
+            <span class="stat-label">Languages</span>
+          </div>
+          <div class="stat-item reveal delay-4">
+            <span class="stat-icon">🏆</span>
+            <strong class="stat-number"><span class="counter" data-target="9">0</span></strong>
+            <span class="stat-label">Awards Won</span>
+          </div>
+          <div class="stat-item reveal delay-5">
+            <span class="stat-icon">✍️</span>
+            <strong class="stat-number"><span class="counter" data-target="6">0</span></strong>
+            <span class="stat-label">Years Writing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── JOURNEY TIMELINE ── -->
+    <section class="journey" id="journey" aria-labelledby="journey-heading">
+      <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header centered">
+          <p class="section-label reveal">Author Journey</p>
+          <h2 class="section-title reveal delay-1" id="journey-heading">How it all began</h2>
+          <p class="section-subtitle reveal delay-2">From a girl with notebooks to a published author. Every page of this journey shaped the stories I tell.</p>
+        </div>
+
+        <div class="timeline" role="list">
+
+          <div class="timeline-item reveal" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2018</span>
+              <h3 class="timeline-title">The First Notebook</h3>
+              <p class="timeline-text">Started writing poems and short stories in a worn spiral notebook. Words were the only language that felt honest enough for what I felt inside.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal delay-1" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2020</span>
+              <h3 class="timeline-title">First Novel Draft</h3>
+              <p class="timeline-text">During the long quiet of 2020, I finished the first draft of what would become "Bound by Secrets." 80,000 words in 4 months.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal delay-2" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2021</span>
+              <h3 class="timeline-title">First Publication</h3>
+              <p class="timeline-text">"Bound by Secrets" was published and reached 10,000 readers in its first month. The response was overwhelming and beautiful.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal delay-3" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2023</span>
+              <h3 class="timeline-title">Award Recognition</h3>
+              <p class="timeline-text">"Under Your Silence" won Best GL Fiction at the Literary Voices Awards. A moment I'll carry forever.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal delay-4" role="listitem">
+            <div class="timeline-marker" aria-hidden="true">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2026</span>
+              <h3 class="timeline-title">Today & Beyond</h3>
+              <p class="timeline-text">Now with 12+ books and readers in 5 languages, I'm still that girl with a notebook — just writing bigger stories now. This is only the beginning.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WRITING PROCESS ── -->
+    <section class="writing-process" id="process" aria-labelledby="process-heading">
+      <div class="bg-orb bg-orb-1" style="right:-200px;left:auto;" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label reveal">Behind the Pages</p>
+          <h2 class="section-title reveal delay-1" id="process-heading">Writing Process</h2>
+          <p class="section-subtitle reveal delay-2">Every book begins as a feeling. Here's how I turn feelings into worlds.</p>
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-step glass-card reveal delay-1">
+            <div class="process-number" aria-hidden="true">01</div>
+            <h3 class="process-title">Feel It First</h3>
+            <p>Every story starts with an emotion I can't shake. A feeling so strong it demands to be written. I let it simmer.</p>
+          </div>
+
+          <div class="process-step glass-card reveal delay-2">
+            <div class="process-number" aria-hidden="true">02</div>
+            <h3 class="process-title">Build the World</h3>
+            <p>Characters come next. I create detailed journals — their fears, their dreams, their voice. I know them before I write a word.</p>
+          </div>
+
+          <div class="process-step glass-card reveal delay-3">
+            <div class="process-number" aria-hidden="true">03</div>
+            <h3 class="process-title">Write Freely</h3>
+            <p>First drafts are emotional and messy. I write without filters, letting the characters lead me wherever they need to go.</p>
+          </div>
+
+          <div class="process-step glass-card reveal delay-4">
+            <div class="process-number" aria-hidden="true">04</div>
+            <h3 class="process-title">Refine & Breathe</h3>
+            <p>Editing is where I find the real story. I polish, cut, and add until the words feel exactly right — like they always meant to be there.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURED QUOTE ── -->
+    <section class="about-quote" aria-label="Author quote">
+      <div class="container">
+        <div class="quote-card" style="max-width:720px;margin:auto;text-align:center;">
+          <blockquote style="border:none;padding:0;font-size:var(--text-2xl);text-align:center;">
+            "I don't write to tell stories. I write so people feel less alone in theirs."
+          </blockquote>
+          <p style="margin-top:var(--space-xl);font-family:var(--font-ui);font-size:var(--text-sm);color:var(--text-muted);">— Author Name</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="bg-orb bg-orb-1" style="opacity:0.5;" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:var(--text-2xl);">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+          <p>Every story has a beginning. This is mine.</p>
+          <div class="social-links" style="margin-top:var(--space-lg);">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Goodreads">📚</a>
+            <a href="#" class="social-link" aria-label="Pinterest">📌</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html"      class="footer-link">Home</a></li>
+            <li><a href="about.html"      class="footer-link">About Me</a></li>
+            <li><a href="books.html"      class="footer-link">All Books</a></li>
+            <li><a href="characters.html" class="footer-link">Characters</a></li>
+            <li><a href="universe.html"   class="footer-link">Universe</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">More</p>
+          <ul class="footer-links" role="list">
+            <li><a href="blog.html"    class="footer-link">Blog</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links" role="list">
+            <li><a href="mailto:hello@inkimagination.com" class="footer-link">hello@inkimagination.com</a></li>
+            <li><a href="contact.html" class="footer-link">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ink &amp; Imagination. All rights reserved.</p>
+        <p>Made with ♥ and many late nights.</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Mobile bottom navigation">
+    <div class="bottom-nav-inner">
+      <a href="books.html"       class="bottom-nav-item"><span class="icon">📚</span><span>Books</span></a>
+      <a href="characters.html"  class="bottom-nav-item"><span class="icon">✨</span><span>Characters</span></a>
+      <a href="index.html"       class="bottom-nav-item"><span class="icon">🏠</span><span>Home</span></a>
+      <a href="universe.html"    class="bottom-nav-item"><span class="icon">🌌</span><span>Universe</span></a>
+      <a href="blog.html"        class="bottom-nav-item"><span class="icon">📝</span><span>Blog</span></a>
+    </div>
+  </nav>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/theme.js"            defer></script>
+  <script src="assets/js/nav.js"              defer></script>
+  <script src="assets/js/cursor.js"           defer></script>
+  <script src="assets/js/animations.js"       defer></script>
+  <script src="assets/js/reading-progress.js" defer></script>
+  <script src="assets/js/stats-counter.js"    defer></script>
+  <script src="assets/js/main.js"             defer></script>
+</body>
+</html>

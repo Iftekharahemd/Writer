@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Characters — Ink & Imagination. Meet the characters who live in the stories. Explore their worlds, relationships, and secrets." />
+  <meta name="theme-color" content="#0a0a14" />
+  <title>Characters — Ink & Imagination</title>
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/characters.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="reading-progress" id="readingProgress" role="progressbar" aria-valuenow="0"></div>
+  <div class="page-transition-overlay" id="pageOverlay" aria-hidden="true"></div>
+
+  <header role="banner">
+    <nav class="nav scrolled" id="mainNav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"       class="nav-link">Home</a></li>
+          <li><a href="about.html"       class="nav-link">About</a></li>
+          <li><a href="books.html"       class="nav-link">Books</a></li>
+          <li><a href="characters.html"  class="nav-link active">Characters</a></li>
+          <li><a href="universe.html"    class="nav-link">Universe</a></li>
+          <li><a href="blog.html"        class="nav-link">Blog</a></li>
+          <li><a href="contact.html"     class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="index.html"       class="nav-link">Home</a></li>
+        <li><a href="about.html"       class="nav-link">About</a></li>
+        <li><a href="books.html"       class="nav-link">Books</a></li>
+        <li><a href="characters.html"  class="nav-link">Characters</a></li>
+        <li><a href="universe.html"    class="nav-link">Universe</a></li>
+        <li><a href="blog.html"        class="nav-link">Blog</a></li>
+        <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero characters-hero" aria-labelledby="characters-hero-heading">
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      <div class="container">
+        <p class="section-label reveal">Explore the Characters</p>
+        <h1 class="reveal delay-1" id="characters-hero-heading">Characters</h1>
+        <p class="page-hero-sub reveal delay-2">The world only exists because they do. Meet the souls who breathe life into every story.</p>
+      </div>
+    </section>
+
+    <!-- ── FILTER ── -->
+    <section class="characters-toolbar" aria-label="Filter characters">
+      <div class="container">
+        <div class="filter-tabs" role="group" aria-label="Filter by book">
+          <button class="filter-tab active" data-char-filter="all">All Books</button>
+          <button class="filter-tab" data-char-filter="bound-by-secrets">Bound by Secrets</button>
+          <button class="filter-tab" data-char-filter="under-your-silence">Under Your Silence</button>
+          <button class="filter-tab" data-char-filter="shadows-of-truth">Shadows of Truth</button>
+          <button class="filter-tab" data-char-filter="beyond-the-lines">Beyond the Lines</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CHARACTERS GRID ── -->
+    <section class="characters-section" aria-labelledby="characters-grid-heading">
+      <div class="container">
+        <h2 class="sr-only" id="characters-grid-heading">All characters</h2>
+        <div class="characters-grid" id="charactersGrid" role="list">
+
+          <!-- Aanya -->
+          <article class="character-card reveal delay-1" role="listitem" data-char-book="bound-by-secrets">
+            <img src="assets/images/author.png" alt="Character: Aanya — protagonist of Bound by Secrets" loading="lazy" width="320" height="430" />
+            <div class="character-card-info">
+              <p class="character-role">Protagonist · Bound by Secrets</p>
+              <h3 class="character-name">Aanya</h3>
+              <p class="character-quote font-italic">"Secrets were the only things I ever truly owned."</p>
+              <a href="character-detail.html?id=1" class="btn btn-ghost btn-sm" style="margin-top:var(--space-md);">View Profile</a>
+            </div>
+          </article>
+
+          <!-- Nara -->
+          <article class="character-card reveal delay-2" role="listitem" data-char-book="under-your-silence">
+            <img src="assets/images/book-under-your-silence.png" alt="Character: Nara — protagonist of Under Your Silence" loading="lazy" width="320" height="430" />
+            <div class="character-card-info">
+              <p class="character-role">Protagonist · Under Your Silence</p>
+              <h3 class="character-name">Nara</h3>
+              <p class="character-quote font-italic">"She didn't need a hero. She was already her own story."</p>
+              <a href="character-detail.html?id=2" class="btn btn-ghost btn-sm" style="margin-top:var(--space-md);">View Profile</a>
+            </div>
+          </article>
+
+          <!-- Ishaan -->
+          <article class="character-card reveal delay-3" role="listitem" data-char-book="bound-by-secrets">
+            <img src="assets/images/book-bound-by-secrets.png" alt="Character: Ishaan — love interest in Bound by Secrets" loading="lazy" width="320" height="430" />
+            <div class="character-card-info">
+              <p class="character-role">Love Interest · Bound by Secrets</p>
+              <h3 class="character-name">Ishaan</h3>
+              <p class="character-quote font-italic">"Some people are storms. I was just trying to find shelter."</p>
+              <a href="character-detail.html?id=3" class="btn btn-ghost btn-sm" style="margin-top:var(--space-md);">View Profile</a>
+            </div>
+          </article>
+
+          <!-- Meera -->
+          <article class="character-card reveal delay-4" role="listitem" data-char-book="shadows-of-truth">
+            <img src="assets/images/book-shadows-of-truth.png" alt="Character: Meera — detective in Shadows of Truth" loading="lazy" width="320" height="430" />
+            <div class="character-card-info">
+              <p class="character-role">Protagonist · Shadows of Truth</p>
+              <h3 class="character-name">Meera</h3>
+              <p class="character-quote font-italic">"Every shadow hides something. I find it."</p>
+              <a href="character-detail.html?id=4" class="btn btn-ghost btn-sm" style="margin-top:var(--space-md);">View Profile</a>
+            </div>
+          </article>
+
+          <!-- Layla -->
+          <article class="character-card reveal delay-1" role="listitem" data-char-book="under-your-silence">
+            <img src="assets/images/book-under-your-silence.png" alt="Character: Layla — love interest in Under Your Silence" loading="lazy" width="320" height="430" />
+            <div class="character-card-info">
+              <p class="character-role">Love Interest · Under Your Silence</p>
+              <h3 class="character-name">Layla</h3>
+              <p class="character-quote font-italic">"Silence was her language. I finally learned to speak it."</p>
+              <a href="character-detail.html?id=5" class="btn btn-ghost btn-sm" style="margin-top:var(--space-md);">View Profile</a>
+            </div>
+          </article>
+
+          <!-- Arjun -->
+          <article class="character-card reveal delay-2" role="listitem" data-char-book="beyond-the-lines">
+            <img src="assets/images/book-beyond-the-lines.png" alt="Character: Arjun — protagonist of Beyond the Lines" loading="lazy" width="320" height="430" />
+            <div class="character-card-info">
+              <p class="character-role">Protagonist · Beyond the Lines</p>
+              <h3 class="character-name">Arjun</h3>
+              <p class="character-quote font-italic">"Lines exist to be redrawn."</p>
+              <a href="character-detail.html?id=6" class="btn btn-ghost btn-sm" style="margin-top:var(--space-md);">View Profile</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:var(--text-2xl);">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+          <p>Every story has a beginning. This is mine.</p>
+          <div class="social-links" style="margin-top:var(--space-lg);">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Goodreads">📚</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html"      class="footer-link">Home</a></li>
+            <li><a href="about.html"      class="footer-link">About Me</a></li>
+            <li><a href="books.html"      class="footer-link">All Books</a></li>
+            <li><a href="characters.html" class="footer-link">Characters</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">More</p>
+          <ul class="footer-links" role="list">
+            <li><a href="universe.html" class="footer-link">Universe</a></li>
+            <li><a href="blog.html"     class="footer-link">Blog</a></li>
+            <li><a href="contact.html"  class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links" role="list">
+            <li><a href="mailto:hello@inkimagination.com" class="footer-link">hello@inkimagination.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ink &amp; Imagination. All rights reserved.</p>
+        <p>Made with ♥ and many late nights.</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Mobile bottom navigation">
+    <div class="bottom-nav-inner">
+      <a href="books.html"       class="bottom-nav-item"><span class="icon">📚</span><span>Books</span></a>
+      <a href="characters.html"  class="bottom-nav-item active" aria-current="page"><span class="icon">✨</span><span>Characters</span></a>
+      <a href="index.html"       class="bottom-nav-item"><span class="icon">🏠</span><span>Home</span></a>
+      <a href="universe.html"    class="bottom-nav-item"><span class="icon">🌌</span><span>Universe</span></a>
+      <a href="blog.html"        class="bottom-nav-item"><span class="icon">📝</span><span>Blog</span></a>
+    </div>
+  </nav>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/theme.js"            defer></script>
+  <script src="assets/js/nav.js"              defer></script>
+  <script src="assets/js/cursor.js"           defer></script>
+  <script src="assets/js/animations.js"       defer></script>
+  <script src="assets/js/reading-progress.js" defer></script>
+  <script src="assets/js/main.js"             defer></script>
+  <script src="assets/js/characters.js"       defer></script>
+</body>
+</html>

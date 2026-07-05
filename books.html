@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="All Books by Ink & Imagination — Browse the full collection of romance, mystery, GL, and drama novels." />
+  <meta name="theme-color" content="#0a0a14" />
+  <title>All Books — Ink & Imagination</title>
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/books.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="reading-progress" id="readingProgress" role="progressbar" aria-valuenow="0"></div>
+  <div class="page-transition-overlay" id="pageOverlay" aria-hidden="true"></div>
+
+  <header role="banner">
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"       class="nav-link">Home</a></li>
+          <li><a href="about.html"       class="nav-link">About</a></li>
+          <li><a href="books.html"       class="nav-link active">Books</a></li>
+          <li><a href="characters.html"  class="nav-link">Characters</a></li>
+          <li><a href="universe.html"    class="nav-link">Universe</a></li>
+          <li><a href="blog.html"        class="nav-link">Blog</a></li>
+          <li><a href="contact.html"     class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="index.html"       class="nav-link">Home</a></li>
+        <li><a href="about.html"       class="nav-link">About</a></li>
+        <li><a href="books.html"       class="nav-link">Books</a></li>
+        <li><a href="characters.html"  class="nav-link">Characters</a></li>
+        <li><a href="universe.html"    class="nav-link">Universe</a></li>
+        <li><a href="blog.html"        class="nav-link">Blog</a></li>
+        <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero books-hero" aria-labelledby="books-hero-heading">
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="container">
+        <p class="section-label reveal">Complete Collection</p>
+        <h1 class="reveal delay-1" id="books-hero-heading">All Books</h1>
+        <p class="page-hero-sub reveal delay-2">Browse every story — romance, mystery, GL, and drama. Find your next emotional escape.</p>
+      </div>
+    </section>
+
+    <!-- ── SEARCH + FILTER ── -->
+    <section class="books-toolbar" aria-label="Filter and search books">
+      <div class="container">
+        <div class="books-toolbar-inner">
+          <!-- Search -->
+          <div class="search-bar" role="search">
+            <label for="bookSearch" class="sr-only">Search books</label>
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="search" id="bookSearch" placeholder="Search books, genres..." autocomplete="off" />
+            <div class="search-results" id="searchResults" role="listbox" aria-label="Search results"></div>
+          </div>
+
+          <!-- Filters -->
+          <div class="filter-tabs" role="group" aria-label="Filter by genre">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="romance">Romance</button>
+            <button class="filter-tab" data-filter="mystery">Mystery</button>
+            <button class="filter-tab" data-filter="gl">GL</button>
+            <button class="filter-tab" data-filter="drama">Drama</button>
+            <button class="filter-tab" data-filter="fantasy">Fantasy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BOOKS GRID ── -->
+    <section class="all-books-section" aria-labelledby="all-books-heading">
+      <div class="container">
+        <h2 class="sr-only" id="all-books-heading">All books</h2>
+        <div class="all-books-grid" id="booksGrid" role="list">
+
+          <!-- Book 1 -->
+          <article class="book-card reveal delay-1" role="listitem" data-genre="romance" data-title="Bound by Secrets">
+            <a href="book-detail.html?id=1" class="book-cover-wrap" aria-label="Bound by Secrets">
+              <img src="assets/images/book-bound-by-secrets.png" alt="Bound by Secrets book cover" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=1" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="1" aria-label="Add to favorites" aria-pressed="false">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">Romance</p>
+              <h3 class="book-card-title">Bound by Secrets</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.5 stars">★★★★½</div>
+                <span class="rating-value">4.5</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 2 -->
+          <article class="book-card reveal delay-2" role="listitem" data-genre="gl" data-title="Under Your Silence">
+            <a href="book-detail.html?id=2" class="book-cover-wrap" aria-label="Under Your Silence">
+              <img src="assets/images/book-under-your-silence.png" alt="Under Your Silence book cover" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=2" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="2" aria-label="Add to favorites" aria-pressed="false">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">GL Romance</p>
+              <h3 class="book-card-title">Under Your Silence</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.8 stars">★★★★★</div>
+                <span class="rating-value">4.8</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 3 -->
+          <article class="book-card reveal delay-3" role="listitem" data-genre="mystery" data-title="Shadows of Truth">
+            <a href="book-detail.html?id=3" class="book-cover-wrap" aria-label="Shadows of Truth">
+              <img src="assets/images/book-shadows-of-truth.png" alt="Shadows of Truth book cover" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=3" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="3" aria-label="Add to favorites" aria-pressed="false">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">Mystery</p>
+              <h3 class="book-card-title">Shadows of Truth</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.7 stars">★★★★½</div>
+                <span class="rating-value">4.7</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 4 -->
+          <article class="book-card reveal delay-4" role="listitem" data-genre="drama" data-title="Beyond the Lines">
+            <a href="book-detail.html?id=4" class="book-cover-wrap" aria-label="Beyond the Lines">
+              <img src="assets/images/book-beyond-the-lines.png" alt="Beyond the Lines book cover" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=4" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="4" aria-label="Add to favorites" aria-pressed="false">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">Drama</p>
+              <h3 class="book-card-title">Beyond the Lines</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.6 stars">★★★★½</div>
+                <span class="rating-value">4.6</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 5 -->
+          <article class="book-card reveal delay-1" role="listitem" data-genre="romance" data-title="When Hearts Collide">
+            <a href="book-detail.html?id=5" class="book-cover-wrap" aria-label="When Hearts Collide">
+              <img src="assets/images/book-bound-by-secrets.png" alt="When Hearts Collide book cover" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=5" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="5" aria-label="Add to favorites" aria-pressed="false">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">Romance</p>
+              <h3 class="book-card-title">When Hearts Collide</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.9 stars">★★★★★</div>
+                <span class="rating-value">4.9</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 6 -->
+          <article class="book-card reveal delay-2" role="listitem" data-genre="mystery" data-title="Fading">
+            <a href="book-detail.html?id=6" class="book-cover-wrap" aria-label="Fading">
+              <img src="assets/images/book-shadows-of-truth.png" alt="Fading book cover" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=6" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="6" aria-label="Add to favorites" aria-pressed="false">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">Mystery</p>
+              <h3 class="book-card-title">Fading</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.4 stars">★★★★☆</div>
+                <span class="rating-value">4.4</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 7 -->
+          <article class="book-card reveal delay-3" role="listitem" data-genre="gl" data-title="Forever in Her Eyes">
+            <a href="book-detail.html?id=7" class="book-cover-wrap" aria-label="Forever in Her Eyes">
+              <img src="assets/images/book-under-your-silence.png" alt="Forever in Her Eyes book cover" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=7" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="7" aria-label="Add to favorites" aria-pressed="false">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">GL Romance</p>
+              <h3 class="book-card-title">Forever in Her Eyes</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.7 stars">★★★★½</div>
+                <span class="rating-value">4.7</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 8 -->
+          <article class="book-card reveal delay-4" role="listitem" data-genre="drama" data-title="The Weight of Words">
+            <a href="book-detail.html?id=8" class="book-cover-wrap" aria-label="The Weight of Words">
+              <img src="assets/images/book-beyond-the-lines.png" alt="The Weight of Words book cover" loading="lazy" width="240" height="360" />
+              <div class="book-card-actions">
+                <a href="book-detail.html?id=8" class="btn btn-primary btn-sm">Read More</a>
+                <button class="btn btn-ghost btn-sm favorite-btn" data-id="8" aria-label="Add to favorites" aria-pressed="false">♡</button>
+              </div>
+            </a>
+            <div class="book-card-info">
+              <p class="book-card-genre">Drama</p>
+              <h3 class="book-card-title">The Weight of Words</h3>
+              <div class="book-card-rating">
+                <div class="stars" aria-label="4.5 stars">★★★★½</div>
+                <span class="rating-value">4.5</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No results -->
+        <div class="no-results" id="noResults" hidden aria-live="polite">
+          <span>📚</span>
+          <p>No books found matching your search.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:var(--text-2xl);">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+          <p>Every story has a beginning. This is mine.</p>
+          <div class="social-links" style="margin-top:var(--space-lg);">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Goodreads">📚</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-heading">Pages</p>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html"      class="footer-link">Home</a></li>
+            <li><a href="about.html"      class="footer-link">About Me</a></li>
+            <li><a href="books.html"      class="footer-link">All Books</a></li>
+            <li><a href="characters.html" class="footer-link">Characters</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">More</p>
+          <ul class="footer-links" role="list">
+            <li><a href="blog.html"    class="footer-link">Blog</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links" role="list">
+            <li><a href="mailto:hello@inkimagination.com" class="footer-link">hello@inkimagination.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ink &amp; Imagination. All rights reserved.</p>
+        <p>Made with ♥ and many late nights.</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Mobile bottom navigation">
+    <div class="bottom-nav-inner">
+      <a href="books.html"       class="bottom-nav-item active" aria-current="page"><span class="icon">📚</span><span>Books</span></a>
+      <a href="characters.html"  class="bottom-nav-item"><span class="icon">✨</span><span>Characters</span></a>
+      <a href="index.html"       class="bottom-nav-item"><span class="icon">🏠</span><span>Home</span></a>
+      <a href="universe.html"    class="bottom-nav-item"><span class="icon">🌌</span><span>Universe</span></a>
+      <a href="blog.html"        class="bottom-nav-item"><span class="icon">📝</span><span>Blog</span></a>
+    </div>
+  </nav>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/theme.js"            defer></script>
+  <script src="assets/js/nav.js"              defer></script>
+  <script src="assets/js/cursor.js"           defer></script>
+  <script src="assets/js/animations.js"       defer></script>
+  <script src="assets/js/reading-progress.js" defer></script>
+  <script src="assets/js/main.js"             defer></script>
+  <script src="assets/js/books.js"            defer></script>
+</body>
+</html>

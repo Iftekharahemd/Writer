@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Universe — Ink & Imagination. Explore the story world: locations, lore, organizations, and the timeline of events." />
+  <meta name="theme-color" content="#0a0a14" />
+  <title>Story Universe — Ink & Imagination</title>
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/universe.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="reading-progress" id="readingProgress" role="progressbar" aria-valuenow="0"></div>
+  <div class="page-transition-overlay" id="pageOverlay" aria-hidden="true"></div>
+
+  <header role="banner">
+    <nav class="nav scrolled" id="mainNav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"       class="nav-link">Home</a></li>
+          <li><a href="about.html"       class="nav-link">About</a></li>
+          <li><a href="books.html"       class="nav-link">Books</a></li>
+          <li><a href="characters.html"  class="nav-link">Characters</a></li>
+          <li><a href="universe.html"    class="nav-link active">Universe</a></li>
+          <li><a href="blog.html"        class="nav-link">Blog</a></li>
+          <li><a href="contact.html"     class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="index.html"       class="nav-link">Home</a></li>
+        <li><a href="about.html"       class="nav-link">About</a></li>
+        <li><a href="books.html"       class="nav-link">Books</a></li>
+        <li><a href="characters.html"  class="nav-link">Characters</a></li>
+        <li><a href="universe.html"    class="nav-link">Universe</a></li>
+        <li><a href="blog.html"        class="nav-link">Blog</a></li>
+        <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── UNIVERSE HERO ── -->
+    <section class="page-hero universe-hero" aria-labelledby="universe-hero-heading">
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      <div class="container">
+        <p class="section-label reveal">Story World</p>
+        <h1 class="reveal delay-1" id="universe-hero-heading">The Universe</h1>
+        <p class="page-hero-sub reveal delay-2">Every book shares a world. Explore the locations, organizations, and events that tie every story together.</p>
+      </div>
+    </section>
+
+    <!-- ── WORLD MAP ── -->
+    <section class="world-map-section" aria-labelledby="world-map-heading">
+      <div class="container">
+        <div class="section-header centered">
+          <p class="section-label reveal">Locations</p>
+          <h2 class="section-title reveal delay-1" id="world-map-heading">Story Locations</h2>
+          <p class="section-subtitle reveal delay-2">Places that shaped the characters and stories you love.</p>
+        </div>
+
+        <!-- Interactive Map Placeholder -->
+        <div class="world-map reveal" id="worldMap" role="img" aria-label="Interactive story world map">
+          <div class="map-location" style="top:30%;left:25%;" data-location="The Silent House" tabindex="0" role="button" aria-label="The Silent House location">
+            <div class="map-pin" aria-hidden="true">📍</div>
+            <div class="map-tooltip">
+              <strong>The Silent House</strong>
+              <p>Where Aanya grew up. Every room holds a secret.</p>
+            </div>
+          </div>
+          <div class="map-location" style="top:55%;left:60%;" data-location="Blackwood Coven" tabindex="0" role="button" aria-label="Blackwood Coven location">
+            <div class="map-pin" aria-hidden="true">📍</div>
+            <div class="map-tooltip">
+              <strong>Blackwood Coven</strong>
+              <p>The gathering place. Where mysteries are born and truths are buried.</p>
+            </div>
+          </div>
+          <div class="map-location" style="top:20%;left:65%;" data-location="The Forgotten City" tabindex="0" role="button" aria-label="The Forgotten City location">
+            <div class="map-pin" aria-hidden="true">📍</div>
+            <div class="map-tooltip">
+              <strong>The Forgotten City</strong>
+              <p>A metropolis where people go to disappear and others go to find them.</p>
+            </div>
+          </div>
+          <div class="map-location" style="top:70%;left:35%;" data-location="Mirena Kingdom" tabindex="0" role="button" aria-label="Mirena Kingdom location">
+            <div class="map-pin" aria-hidden="true">📍</div>
+            <div class="map-tooltip">
+              <strong>Mirena Kingdom</strong>
+              <p>Where ancient laws clash with modern hearts.</p>
+            </div>
+          </div>
+          <div class="map-bg-img" aria-hidden="true">
+            <img src="assets/images/book-beyond-the-lines.png" alt="" loading="lazy" width="800" height="500" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LORE CARDS ── -->
+    <section class="lore-section" aria-labelledby="lore-heading">
+      <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label reveal">World Building</p>
+          <h2 class="section-title reveal delay-1" id="lore-heading">Lore &amp; Organizations</h2>
+        </div>
+        <div class="lore-grid">
+          <div class="lore-card glass-card reveal delay-1">
+            <div class="lore-icon" aria-hidden="true">🏛️</div>
+            <h3>The Order of Silence</h3>
+            <p>A secret society that appears across multiple books. Their motives are never fully revealed — until now.</p>
+          </div>
+          <div class="lore-card glass-card reveal delay-2">
+            <div class="lore-icon" aria-hidden="true">📜</div>
+            <h3>The Accord</h3>
+            <p>An ancient agreement between families that binds them to impossible promises across generations.</p>
+          </div>
+          <div class="lore-card glass-card reveal delay-3">
+            <div class="lore-icon" aria-hidden="true">🌹</div>
+            <h3>The Red Thread Theory</h3>
+            <p>A belief shared by characters that love — no matter what form — always finds its way. Even through silence.</p>
+          </div>
+          <div class="lore-card glass-card reveal delay-4">
+            <div class="lore-icon" aria-hidden="true">🗝️</div>
+            <h3>Keeper of Secrets</h3>
+            <p>A role that appears in every book. Someone always holds the truth. The question is whether they choose to speak it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EVENTS TIMELINE ── -->
+    <section class="universe-timeline" aria-labelledby="events-heading">
+      <div class="container">
+        <div class="section-header centered">
+          <p class="section-label reveal">Timeline of Events</p>
+          <h2 class="section-title reveal delay-1" id="events-heading">Connected Story Events</h2>
+          <p class="section-subtitle reveal delay-2">All books share a universe. Here's how the timelines connect.</p>
+        </div>
+
+        <div class="events-list">
+          <div class="event-item reveal">
+            <div class="event-year">Year 1</div>
+            <div class="event-content glass-card">
+              <span class="genre-badge">Bound by Secrets</span>
+              <h3>The First Secret</h3>
+              <p>Aanya discovers a letter that changes everything she thought she knew about her family.</p>
+            </div>
+          </div>
+          <div class="event-item reveal delay-1">
+            <div class="event-year">Year 2</div>
+            <div class="event-content glass-card">
+              <span class="genre-badge">Under Your Silence</span>
+              <h3>The Meeting</h3>
+              <p>Nara and Layla cross paths at a literary festival. A glance. A book. A beginning.</p>
+            </div>
+          </div>
+          <div class="event-item reveal delay-2">
+            <div class="event-year">Year 3</div>
+            <div class="event-content glass-card">
+              <span class="genre-badge">Shadows of Truth</span>
+              <h3>The Investigation</h3>
+              <p>Meera uncovers that the crimes in The Forgotten City are connected to the Order of Silence.</p>
+            </div>
+          </div>
+          <div class="event-item reveal delay-3">
+            <div class="event-year">Year 4</div>
+            <div class="event-content glass-card">
+              <span class="genre-badge">Beyond the Lines</span>
+              <h3>The Reckoning</h3>
+              <p>All threads converge. The characters from every book share a moment that changes the world they live in.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:var(--text-2xl);">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+          <p>Every story has a beginning. This is mine.</p>
+          <div class="social-links" style="margin-top:var(--space-lg);">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Goodreads">📚</a>
+          </div>
+        </div>
+        <div><p class="footer-heading">Pages</p>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html"      class="footer-link">Home</a></li>
+            <li><a href="about.html"      class="footer-link">About Me</a></li>
+            <li><a href="books.html"      class="footer-link">All Books</a></li>
+            <li><a href="characters.html" class="footer-link">Characters</a></li>
+          </ul>
+        </div>
+        <div><p class="footer-heading">More</p>
+          <ul class="footer-links" role="list">
+            <li><a href="universe.html" class="footer-link">Universe</a></li>
+            <li><a href="blog.html"     class="footer-link">Blog</a></li>
+            <li><a href="contact.html"  class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div><p class="footer-heading">Contact</p>
+          <ul class="footer-links" role="list">
+            <li><a href="mailto:hello@inkimagination.com" class="footer-link">hello@inkimagination.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ink &amp; Imagination. All rights reserved.</p>
+        <p>Made with ♥ and many late nights.</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Mobile bottom navigation">
+    <div class="bottom-nav-inner">
+      <a href="books.html"       class="bottom-nav-item"><span class="icon">📚</span><span>Books</span></a>
+      <a href="characters.html"  class="bottom-nav-item"><span class="icon">✨</span><span>Characters</span></a>
+      <a href="index.html"       class="bottom-nav-item"><span class="icon">🏠</span><span>Home</span></a>
+      <a href="universe.html"    class="bottom-nav-item active" aria-current="page"><span class="icon">🌌</span><span>Universe</span></a>
+      <a href="blog.html"        class="bottom-nav-item"><span class="icon">📝</span><span>Blog</span></a>
+    </div>
+  </nav>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/theme.js"            defer></script>
+  <script src="assets/js/nav.js"              defer></script>
+  <script src="assets/js/cursor.js"           defer></script>
+  <script src="assets/js/animations.js"       defer></script>
+  <script src="assets/js/reading-progress.js" defer></script>
+  <script src="assets/js/main.js"             defer></script>
+  <script src="assets/js/universe.js"         defer></script>
+</body>
+</html>

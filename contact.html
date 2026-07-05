@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact — Ink & Imagination. Send a message, ask about books, collaborations, or just say hello." />
+  <meta name="theme-color" content="#0a0a14" />
+  <title>Contact — Ink & Imagination</title>
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="reading-progress" id="readingProgress" role="progressbar" aria-valuenow="0"></div>
+  <div class="page-transition-overlay" id="pageOverlay" aria-hidden="true"></div>
+
+  <header role="banner">
+    <nav class="nav scrolled" id="mainNav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"       class="nav-link">Home</a></li>
+          <li><a href="about.html"       class="nav-link">About</a></li>
+          <li><a href="books.html"       class="nav-link">Books</a></li>
+          <li><a href="characters.html"  class="nav-link">Characters</a></li>
+          <li><a href="universe.html"    class="nav-link">Universe</a></li>
+          <li><a href="blog.html"        class="nav-link">Blog</a></li>
+          <li><a href="contact.html"     class="nav-link active">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="index.html"       class="nav-link">Home</a></li>
+        <li><a href="about.html"       class="nav-link">About</a></li>
+        <li><a href="books.html"       class="nav-link">Books</a></li>
+        <li><a href="characters.html"  class="nav-link">Characters</a></li>
+        <li><a href="universe.html"    class="nav-link">Universe</a></li>
+        <li><a href="blog.html"        class="nav-link">Blog</a></li>
+        <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── CONTACT HERO ── -->
+    <section class="page-hero contact-hero" aria-labelledby="contact-hero-heading">
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="container">
+        <p class="section-label reveal">Get in Touch</p>
+        <h1 class="reveal delay-1" id="contact-hero-heading">Contact Me</h1>
+        <p class="page-hero-sub reveal delay-2">I'd love to hear from you — about books, collaborations, events, or just to say hello.</p>
+      </div>
+    </section>
+
+    <!-- ── CONTACT SECTION ── -->
+    <section class="contact-section" aria-labelledby="contact-form-heading">
+      <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Info -->
+          <div class="contact-info">
+            <h2 class="reveal" id="contact-form-heading" style="font-size:var(--text-3xl);margin-bottom:var(--space-lg);">Let's Connect</h2>
+            <p class="reveal delay-1">Whether you want to talk about a book, share your thoughts, or just say hi — I read every message. Drop me a note below.</p>
+
+            <div class="contact-details reveal delay-2">
+              <div class="contact-detail-item">
+                <span class="contact-detail-icon" aria-hidden="true">📧</span>
+                <div>
+                  <p class="contact-detail-label">Email</p>
+                  <a href="mailto:hello@inkimagination.com" class="contact-detail-value">hello@inkimagination.com</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <span class="contact-detail-icon" aria-hidden="true">📍</span>
+                <div>
+                  <p class="contact-detail-label">Based in</p>
+                  <p class="contact-detail-value">India</p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <span class="contact-detail-icon" aria-hidden="true">⏰</span>
+                <div>
+                  <p class="contact-detail-label">Response time</p>
+                  <p class="contact-detail-value">Within 48 hours</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials reveal delay-3">
+              <p class="contact-socials-label">Find me on</p>
+              <div class="social-links" style="gap:var(--space-sm);">
+                <a href="#" class="social-link" aria-label="Twitter / X">𝕏</a>
+                <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                <a href="#" class="social-link" aria-label="Goodreads">📚</a>
+                <a href="#" class="social-link" aria-label="Pinterest">📌</a>
+                <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-form-wrap reveal-right">
+            <div class="glass-card">
+              <form id="contactForm" novalidate aria-label="Contact form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="contactName">Your Name</label>
+                    <input class="form-input" type="text" id="contactName" name="name" placeholder="Aanya Sharma" autocomplete="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="contactEmail">Your Email</label>
+                    <input class="form-input" type="email" id="contactEmail" name="email" placeholder="hello@example.com" autocomplete="email" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contactSubject">Subject</label>
+                  <input class="form-input" type="text" id="contactSubject" name="subject" placeholder="What's this about?" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contactMessage">Your Message</label>
+                  <textarea class="form-textarea" id="contactMessage" name="message" placeholder="Tell me everything..." rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="contactSubmit" style="width:100%;justify-content:center;">
+                  Send Message ✈️
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="faq-section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header centered">
+          <p class="section-label reveal">Common Questions</p>
+          <h2 class="section-title reveal delay-1" id="faq-heading">FAQ</h2>
+        </div>
+        <div class="faq-list" id="faqList">
+
+          <div class="faq-item reveal delay-1">
+            <button class="faq-question" aria-expanded="false">
+              Do you do book signing events?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Yes! I occasionally do signing events and literary festivals. Follow me on social media for announcements — I always post event details there first.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal delay-2">
+            <button class="faq-question" aria-expanded="false">
+              Can I request an ARC (Advanced Reader Copy)?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>ARC requests open 6–8 weeks before a book releases. Sign up for my newsletter to be the first to know when the next ARC sign-up is open.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal delay-3">
+            <button class="faq-question" aria-expanded="false">
+              Do you accept collaboration requests?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>I do! Reach out via the contact form with your idea. I especially love collaborating with other authors, artists, and content creators who share a love of storytelling.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal delay-4">
+            <button class="faq-question" aria-expanded="false">
+              Where can I buy your books?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>My books are available on Amazon, Flipkart, Goodreads (ebook), and select local bookstores. You can find links on each individual book page.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:var(--text-2xl);">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+          <p>Every story has a beginning. This is mine.</p>
+          <div class="social-links" style="margin-top:var(--space-lg);">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Goodreads">📚</a>
+          </div>
+        </div>
+        <div><p class="footer-heading">Pages</p>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html"      class="footer-link">Home</a></li>
+            <li><a href="about.html"      class="footer-link">About Me</a></li>
+            <li><a href="books.html"      class="footer-link">All Books</a></li>
+            <li><a href="characters.html" class="footer-link">Characters</a></li>
+          </ul>
+        </div>
+        <div><p class="footer-heading">More</p>
+          <ul class="footer-links" role="list">
+            <li><a href="universe.html" class="footer-link">Universe</a></li>
+            <li><a href="blog.html"     class="footer-link">Blog</a></li>
+            <li><a href="contact.html"  class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div><p class="footer-heading">Contact</p>
+          <ul class="footer-links" role="list">
+            <li><a href="mailto:hello@inkimagination.com" class="footer-link">hello@inkimagination.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ink &amp; Imagination. All rights reserved.</p>
+        <p>Made with ♥ and many late nights.</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Mobile bottom navigation">
+    <div class="bottom-nav-inner">
+      <a href="books.html"       class="bottom-nav-item"><span class="icon">📚</span><span>Books</span></a>
+      <a href="characters.html"  class="bottom-nav-item"><span class="icon">✨</span><span>Characters</span></a>
+      <a href="index.html"       class="bottom-nav-item"><span class="icon">🏠</span><span>Home</span></a>
+      <a href="universe.html"    class="bottom-nav-item"><span class="icon">🌌</span><span>Universe</span></a>
+      <a href="blog.html"        class="bottom-nav-item"><span class="icon">📝</span><span>Blog</span></a>
+    </div>
+  </nav>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/theme.js"            defer></script>
+  <script src="assets/js/nav.js"              defer></script>
+  <script src="assets/js/cursor.js"           defer></script>
+  <script src="assets/js/animations.js"       defer></script>
+  <script src="assets/js/reading-progress.js" defer></script>
+  <script src="assets/js/main.js"             defer></script>
+  <script src="assets/js/contact.js"          defer></script>
+</body>
+</html>

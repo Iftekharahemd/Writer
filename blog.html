@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog — Ink & Imagination. Writing tips, behind-the-scenes stories, and thoughts from the author." />
+  <meta name="theme-color" content="#0a0a14" />
+  <title>Blog — Ink & Imagination</title>
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages/blog.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="reading-progress" id="readingProgress" role="progressbar" aria-valuenow="0"></div>
+  <div class="page-transition-overlay" id="pageOverlay" aria-hidden="true"></div>
+
+  <header role="banner">
+    <nav class="nav scrolled" id="mainNav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"       class="nav-link">Home</a></li>
+          <li><a href="about.html"       class="nav-link">About</a></li>
+          <li><a href="books.html"       class="nav-link">Books</a></li>
+          <li><a href="characters.html"  class="nav-link">Characters</a></li>
+          <li><a href="universe.html"    class="nav-link">Universe</a></li>
+          <li><a href="blog.html"        class="nav-link active">Blog</a></li>
+          <li><a href="contact.html"     class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="index.html"       class="nav-link">Home</a></li>
+        <li><a href="about.html"       class="nav-link">About</a></li>
+        <li><a href="books.html"       class="nav-link">Books</a></li>
+        <li><a href="characters.html"  class="nav-link">Characters</a></li>
+        <li><a href="universe.html"    class="nav-link">Universe</a></li>
+        <li><a href="blog.html"        class="nav-link">Blog</a></li>
+        <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── BLOG HERO ── -->
+    <section class="page-hero blog-hero" aria-labelledby="blog-hero-heading">
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="container">
+        <p class="section-label reveal">From the Desk</p>
+        <h1 class="reveal delay-1" id="blog-hero-heading">Blog</h1>
+        <p class="page-hero-sub reveal delay-2">Thoughts. Behind the scenes. Writing life. Musings.</p>
+      </div>
+    </section>
+
+    <!-- ── FEATURED POST ── -->
+    <section class="featured-post-section" aria-labelledby="featured-post-heading">
+      <div class="container">
+        <h2 class="sr-only" id="featured-post-heading">Featured post</h2>
+        <article class="featured-post reveal">
+          <div class="featured-post-img">
+            <img src="assets/images/author.png" alt="Featured blog post: How I Write to Feel Emotions" loading="eager" width="800" height="450" />
+            <div class="featured-post-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="featured-post-body">
+            <div class="blog-meta">
+              <span class="blog-category">Writing</span>
+              <span class="blog-meta-item">📖 5 min read</span>
+              <span class="blog-meta-item">June 28, 2026</span>
+            </div>
+            <h3 class="featured-post-title">How I Write to Feel Emotions</h3>
+            <p class="featured-post-excerpt">The process of writing from raw emotion — how vulnerability becomes the engine of every story. Every word I write begins not with a thought, but with a feeling I can't shake. This is that story.</p>
+            <a href="blog-detail.html?id=1" class="btn btn-primary">Read Full Post</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── BLOG GRID ── -->
+    <section class="all-posts-section" aria-labelledby="all-posts-heading">
+      <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+      <div class="container">
+        <!-- Filter -->
+        <div class="blog-toolbar" style="margin-bottom:var(--space-2xl);">
+          <div class="filter-tabs" role="group" aria-label="Filter by category">
+            <button class="filter-tab active" data-blog-filter="all">All</button>
+            <button class="filter-tab" data-blog-filter="writing">Writing</button>
+            <button class="filter-tab" data-blog-filter="behind-the-story">Behind the Story</button>
+            <button class="filter-tab" data-blog-filter="tips">Tips</button>
+            <button class="filter-tab" data-blog-filter="life">Life</button>
+          </div>
+        </div>
+
+        <h2 class="sr-only" id="all-posts-heading">All blog posts</h2>
+        <div class="blog-grid" id="blogGrid" role="list">
+
+          <article class="blog-card reveal delay-1" role="listitem" data-blog-cat="writing">
+            <div class="blog-card-img">
+              <img src="assets/images/author.png" alt="" loading="lazy" width="400" height="225" />
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Writing</span>
+                <span class="blog-meta-item">📖 5 min read</span>
+              </div>
+              <h3 class="blog-card-title">How I Write to Feel Emotions</h3>
+              <p class="blog-card-excerpt">The process of writing from raw emotion — how vulnerability becomes the engine of every story.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-item">June 28, 2026</span>
+                <a href="blog-detail.html?id=1" class="view-all" style="font-size:var(--text-xs);">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal delay-2" role="listitem" data-blog-cat="behind-the-story">
+            <div class="blog-card-img">
+              <img src="assets/images/book-under-your-silence.png" alt="" loading="lazy" width="400" height="225" />
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Behind the Story</span>
+                <span class="blog-meta-item">📖 7 min read</span>
+              </div>
+              <h3 class="blog-card-title">Behind the Story: When Hearts Collide</h3>
+              <p class="blog-card-excerpt">The inspiration, the heartbreak, and the magic that went into writing my latest novel.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-item">June 15, 2026</span>
+                <a href="blog-detail.html?id=2" class="view-all" style="font-size:var(--text-xs);">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal delay-3" role="listitem" data-blog-cat="tips">
+            <div class="blog-card-img">
+              <img src="assets/images/book-beyond-the-lines.png" alt="" loading="lazy" width="400" height="225" />
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Tips</span>
+                <span class="blog-meta-item">📖 4 min read</span>
+              </div>
+              <h3 class="blog-card-title">5 Things Every Writer Learns Late</h3>
+              <p class="blog-card-excerpt">Hard-earned lessons from my writing journey that I wish someone had told me sooner.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-item">June 5, 2026</span>
+                <a href="blog-detail.html?id=3" class="view-all" style="font-size:var(--text-xs);">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal delay-1" role="listitem" data-blog-cat="life">
+            <div class="blog-card-img">
+              <img src="assets/images/book-shadows-of-truth.png" alt="" loading="lazy" width="400" height="225" />
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Life</span>
+                <span class="blog-meta-item">📖 3 min read</span>
+              </div>
+              <h3 class="blog-card-title">What Silence Taught Me About Writing</h3>
+              <p class="blog-card-excerpt">Sometimes the most powerful chapters are the ones written in the quiet between the noise.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-item">May 20, 2026</span>
+                <a href="blog-detail.html?id=4" class="view-all" style="font-size:var(--text-xs);">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal delay-2" role="listitem" data-blog-cat="writing">
+            <div class="blog-card-img">
+              <img src="assets/images/book-bound-by-secrets.png" alt="" loading="lazy" width="400" height="225" />
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Writing</span>
+                <span class="blog-meta-item">📖 6 min read</span>
+              </div>
+              <h3 class="blog-card-title">How Characters Tell Me Their Story</h3>
+              <p class="blog-card-excerpt">I don't write characters. They write themselves. I just hold the pen and listen.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-item">May 10, 2026</span>
+                <a href="blog-detail.html?id=5" class="view-all" style="font-size:var(--text-xs);">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal delay-3" role="listitem" data-blog-cat="behind-the-story">
+            <div class="blog-card-img">
+              <img src="assets/images/author.png" alt="" loading="lazy" width="400" height="225" />
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Behind the Story</span>
+                <span class="blog-meta-item">📖 8 min read</span>
+              </div>
+              <h3 class="blog-card-title">The Real Story Behind Shadows of Truth</h3>
+              <p class="blog-card-excerpt">Every mystery I write starts with a real question I couldn't answer. This is the question that started it all.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-item">April 28, 2026</span>
+                <a href="blog-detail.html?id=6" class="view-all" style="font-size:var(--text-xs);">Read More</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:var(--text-2xl);">Ink &amp; Imagination<span>Writer · Dreamer · Storyteller</span></a>
+          <p>Every story has a beginning. This is mine.</p>
+          <div class="social-links" style="margin-top:var(--space-lg);">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Goodreads">📚</a>
+          </div>
+        </div>
+        <div><p class="footer-heading">Pages</p>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html"      class="footer-link">Home</a></li>
+            <li><a href="about.html"      class="footer-link">About Me</a></li>
+            <li><a href="books.html"      class="footer-link">All Books</a></li>
+            <li><a href="characters.html" class="footer-link">Characters</a></li>
+          </ul>
+        </div>
+        <div><p class="footer-heading">More</p>
+          <ul class="footer-links" role="list">
+            <li><a href="universe.html" class="footer-link">Universe</a></li>
+            <li><a href="blog.html"     class="footer-link">Blog</a></li>
+            <li><a href="contact.html"  class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div><p class="footer-heading">Contact</p>
+          <ul class="footer-links" role="list">
+            <li><a href="mailto:hello@inkimagination.com" class="footer-link">hello@inkimagination.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Ink &amp; Imagination. All rights reserved.</p>
+        <p>Made with ♥ and many late nights.</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Mobile bottom navigation">
+    <div class="bottom-nav-inner">
+      <a href="books.html"       class="bottom-nav-item"><span class="icon">📚</span><span>Books</span></a>
+      <a href="characters.html"  class="bottom-nav-item"><span class="icon">✨</span><span>Characters</span></a>
+      <a href="index.html"       class="bottom-nav-item"><span class="icon">🏠</span><span>Home</span></a>
+      <a href="universe.html"    class="bottom-nav-item"><span class="icon">🌌</span><span>Universe</span></a>
+      <a href="blog.html"        class="bottom-nav-item active" aria-current="page"><span class="icon">📝</span><span>Blog</span></a>
+    </div>
+  </nav>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/theme.js"            defer></script>
+  <script src="assets/js/nav.js"              defer></script>
+  <script src="assets/js/cursor.js"           defer></script>
+  <script src="assets/js/animations.js"       defer></script>
+  <script src="assets/js/reading-progress.js" defer></script>
+  <script src="assets/js/main.js"             defer></script>
+  <script src="assets/js/blog.js"             defer></script>
+</body>
+</html>
